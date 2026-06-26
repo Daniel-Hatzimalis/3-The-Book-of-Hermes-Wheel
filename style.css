@@ -30,9 +30,9 @@ body {
     font-weight: 700;
     text-decoration: none;
     display: inline-block;
-    border-radius: 40px; /* Very rounded corners */
+    border-radius: 40px; 
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
-    margin: 15px 0 25px 0;
+    margin: 10px 0 25px 0; /* Tightened top margin */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .btn-jade:hover {
@@ -41,14 +41,15 @@ body {
 }
 
 /* Layout & Imagery */
+header {
+    padding: 0;
+    margin: 0;
+    line-height: 0; 
+}
 .header-img {
     width: 100%;
     height: auto;
     display: block;
-}
-.responsive-img {
-    max-width: 100%;
-    height: auto;
 }
 .setup-img {
     max-width: 600px;
@@ -59,11 +60,17 @@ body {
 .book-image { 
     max-width: 450px; 
     width: 100%; 
-    margin-top: 20px; 
+    margin-top: 10px;
+    margin-bottom: 0px; /* Removed padding below image */
+    transition: transform 0.2s ease;
+}
+.book-image:hover {
+    transform: translateY(-2px);
 }
 .crown-sigil {
-    max-width: 80px;
-    margin-bottom: 15px;
+    max-width: 45px; /* Shrunk slightly */
+    margin-bottom: 5px; 
+    display: inline-block;
 }
 .sticky-logo {
     position: fixed;
@@ -91,7 +98,7 @@ body {
 .marquee-content {
     flex-shrink: 0;
     display: flex;
-    animation: scroll 75s linear infinite; /* Slowed down */
+    animation: scroll 75s linear infinite; 
 }
 .marquee-content span {
     margin: 0 40px;
@@ -116,6 +123,11 @@ body {
 .pb-small { padding-bottom: 20px; }
 .pt-large { padding-top: 80px; }
 .pb-large { padding-bottom: 80px; }
+
+/* Adjusted Transition Paddings */
+.prologue-section { padding: 30px 20px 20px 20px; } /* Perfect middle ground top padding, even bottom padding */
+.main-text-section { padding: 20px 20px 80px 20px; } /* Even top padding */
+.prologue-text { font-size: 1.25rem; margin-top: 10px; }
 
 hr.thin-line { 
     border: 0; 
