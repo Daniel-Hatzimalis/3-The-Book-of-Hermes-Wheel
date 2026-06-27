@@ -72,6 +72,11 @@ header {
     margin-bottom: 5px; 
     display: inline-block;
 }
+.hermes-img {
+    max-width: 120px;
+    margin: 0 auto 20px auto;
+    display: inline-block;
+}
 .sticky-logo {
     position: fixed;
     top: 15px;
@@ -102,7 +107,7 @@ header {
 }
 .marquee-content span {
     margin: 0 40px;
-    font-size: 1.15rem; /* Desktop Size */
+    font-size: 1.15rem; 
     white-space: nowrap;
     display: inline-block;
 }
@@ -137,6 +142,10 @@ hr.thin-line {
 }
 
 /* New Elements (Quotes & Hermes Section) */
+.quotes-wrapper {
+    max-width: 450px; /* Forces mobile-like structure on desktop */
+    margin: 0 auto;
+}
 .static-quote {
     font-size: 1.1rem;
     font-style: italic;
@@ -144,7 +153,7 @@ hr.thin-line {
     color: #333333;
 }
 .hermes-section p {
-    margin-bottom: 12px; /* Tighter paragraph spacing */
+    margin-bottom: 12px; 
 }
 
 /* Footer */
@@ -178,10 +187,10 @@ hr.thin-line {
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
     .marquee-content span {
-        font-size: 0.9rem; /* Shrinks the scrolling text perfectly for phones */
+        font-size: 0.9rem; 
     }
     .container {
-        padding-left: 20px; /* Prevents text from touching screen edges */
+        padding-left: 20px; 
         padding-right: 20px;
     }
     .hermes-section .container {
