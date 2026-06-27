@@ -102,8 +102,9 @@ header {
 }
 .marquee-content span {
     margin: 0 40px;
-    font-size: 1.15rem;
+    font-size: 1.15rem; /* Desktop Size */
     white-space: nowrap;
+    display: inline-block;
 }
 @keyframes scroll {
     0% { transform: translateX(0); }
@@ -124,7 +125,6 @@ header {
 .pt-large { padding-top: 80px; }
 .pb-large { padding-bottom: 80px; }
 
-/* Adjusted Transition Paddings */
 .prologue-section { padding: 30px 20px 20px 20px; } 
 .main-text-section { padding: 20px 20px 80px 20px; } 
 .prologue-text { font-size: 1.25rem; margin-top: 10px; }
@@ -134,6 +134,17 @@ hr.thin-line {
     height: 1px; 
     background-color: #CCCCCC; 
     margin: 40px 0; 
+}
+
+/* New Elements (Quotes & Hermes Section) */
+.static-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 25px;
+    color: #333333;
+}
+.hermes-section p {
+    margin-bottom: 12px; /* Tighter paragraph spacing */
 }
 
 /* Footer */
@@ -163,3 +174,18 @@ hr.thin-line {
 }
 .social-item:hover { text-decoration: underline; }
 .social-icon { width: 20px; height: 20px; fill: currentColor; }
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .marquee-content span {
+        font-size: 0.9rem; /* Shrinks the scrolling text perfectly for phones */
+    }
+    .container {
+        padding-left: 20px; /* Prevents text from touching screen edges */
+        padding-right: 20px;
+    }
+    .hermes-section .container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
