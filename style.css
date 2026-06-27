@@ -72,11 +72,6 @@ header {
     margin-bottom: 5px; 
     display: inline-block;
 }
-.hermes-img {
-    max-width: 120px;
-    margin: 0 auto 20px auto;
-    display: inline-block;
-}
 .sticky-logo {
     position: fixed;
     top: 15px;
@@ -143,7 +138,7 @@ hr.thin-line {
 
 /* New Elements (Quotes & Hermes Section) */
 .quotes-wrapper {
-    max-width: 450px; /* Forces mobile-like structure on desktop */
+    max-width: 600px; /* Widened so it looks less squished on desktop */
     margin: 0 auto;
 }
 .static-quote {
@@ -151,6 +146,27 @@ hr.thin-line {
     font-style: italic;
     margin-bottom: 25px;
     color: #333333;
+}
+
+/* 28% Opacity Background Layer Setup */
+.hermes-section {
+    position: relative;
+    overflow: hidden; /* Ensures image doesn't bleed outside the green box */
+}
+.hermes-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('Untitled design (7).jpg');
+    background-size: contain; /* Scales to exactly fit height */
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.28; /* Exact 28% opacity */
+    z-index: 0; /* Drops behind the text */
+}
+.hermes-section .container {
+    position: relative;
+    z-index: 1; /* Lifts the text to sit perfectly on top */
 }
 .hermes-section p {
     margin-bottom: 12px; 
